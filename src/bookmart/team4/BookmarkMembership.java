@@ -11,4 +11,5 @@ package bookmart.team4;
  */
 public class BookmarkMembership {
     
+    private String anus;
 }
