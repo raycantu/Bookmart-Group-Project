@@ -103,4 +103,12 @@ public Abstract class BookmarkMembership
       // When used by Faculty, the fee will be $9.99/month
   }
   
+  public abstract int freeBooks()
+  {
+      // Abstract method that will display the amount of free books to borrow demepending on a user
+      // When used by Student, the amount of free books = 1
+      // When used by Faculty, the amount of free books = 4
+  }
+  }
+  
 }
