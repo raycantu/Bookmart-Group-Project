@@ -3,8 +3,8 @@
 
 public class Faculty extends BookmarkMembership
 {
-  private final float facultyFee = 9.99; // Used to calculate the monthly fee
-  private final int facultyFreeBooks = 1;  // Used to keep track of the amount of free books allowed
+  private final float facultyFee = 7.99; // Used to calculate the monthly fee
+  private final int facultyFreeBooks = 0;  // Used to keep track of the amount of free books allowed
   private int amountDaysBorrowed = 0; // Used to keep track of the amount of free days you get
   private float facultyBalance = 0.00 // Used to keep track of the balance for the facutly member
 
@@ -20,21 +20,21 @@ public class Faculty extends BookmarkMembership
   {
     amountDaysBorrowed++; // Increase the amount of days borrowed by 1
     
-    if(amountDaysBorrowed > 1)
+    if(amountDaysBorrowed > 14)
     {
       throw new IllegalArgumentException("The amount of free days to borrow this book
-      can not exceed 7 day.");
+      can not exceed 14 day.");
     }
   }
   
   @Override
   public int freeBooks()
   {
-    facultyFreeBooks--; //Subtracts from the amount of free books a Faculty member can borrow
+    facultyFreeBooks++; //Subtracts from the amount of free books a Faculty member can borrow
     
-    if(facultyFreeBooks < 1)
+    if(facultyFreeBooks > 4)
     {
-      throw new IllegalArgumentException("You can only borrow 1 free book at a time.");
+      throw new IllegalArgumentException("You can only borrow 4 free book at a time.");
     }
   }
   
