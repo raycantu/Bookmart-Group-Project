@@ -13,7 +13,7 @@ package bookmart.team4;
 //    private string christian;
 //}
 
-public Abstract class BookmarkMembership
+public abstract class BookmarkMembership
 {
 
   private String firstName;  // Holds first name of user
@@ -30,7 +30,7 @@ public Abstract class BookmarkMembership
       this.lastName = lastName; // Initializes lastName
       this.middleInitial = middleInitial; // Initializes middleInitial
       this.password = password; // Initilizes password
-      this.email = email // Initilizes email
+      this.email = email; // Initilizes email
   }
   // Sets First Name
   public void setFirstName(String firstName)
@@ -56,7 +56,7 @@ public Abstract class BookmarkMembership
   // Sets Middle Initial
   public void setMiddleInitial(String middleInitial)
   {
-      this.middleInitial = middleInitial
+      this.middleInitial = middleInitial;
   }
   
   // Return Middle Initial
@@ -89,26 +89,19 @@ public Abstract class BookmarkMembership
       return email;
   }
   
-  public abstract int daysBorrowed()
-  {
-      // Abstract method that will later be used to count the days a user can borrow a book
-      // When used by Student, there will only be 7 days to borrow book
-      // When used by Faculty, there will be 14 days to borrow a book
-  }
+  public abstract int daysBorrowed();
+  //Abstract method that will later be used to count the days a user can borrow a book
+  // When used by Student, there will only be 7 days to borrow book
+  // When used by Faculty, there will be 14 days to borrow a book
   
-  public abstract float fee()
-  {
-      // Abstract method that will calculate the montly fee for the user
-      // When used by Student, the fee will be $7.99/month
-      // When used by Faculty, the fee will be $9.99/month
-  }
+  public abstract double fee();
+  // Abstract method that will calculate the monthly fee for the user
+  // When used by Student, the fee will be $7.99/month
+  // When used by Faculty, the fee will be $9.99/month
   
-  public abstract int freeBooks()
-  {
-      // Abstract method that will display the amount of free books to borrow demepending on a user
-      // When used by Student, the amount of free books = 1
-      // When used by Faculty, the amount of free books = 4
-  }
-  }
-  
+  public abstract int freeBooks();
+  // Abstract method that will display the amount of free books to borrow demepending on a user
+  // When used by Student, the amount of free books = 1
+  // When used by Faculty, the amount of free books = 4
+
 }
